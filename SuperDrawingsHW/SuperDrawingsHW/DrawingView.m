@@ -21,10 +21,9 @@
     for (NSValue* value in self.points) {
         
         CGPoint point = value.CGPointValue;
-      // NSLog(@"%@",NSStringFromCGPoint(point));
         CGContextRef ctxt = UIGraphicsGetCurrentContext();
         CGContextSetFillColorWithColor(ctxt, self.currentColor.CGColor);
-        CGContextFillRect(ctxt, CGRectMake(point.x, point.y, 5, 5));
+        CGContextFillRect(ctxt, CGRectMake(point.x, point.y, 10, 10));
         CGContextFillPath(ctxt);
     }
     
